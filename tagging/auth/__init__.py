@@ -3,13 +3,15 @@ from datetime import timedelta
 from cachier import cachier
 import requests
 
+from .key import API_KEY, SECRET_KEY
+
 
 @cachier(stale_after=timedelta(days=30))
 def get_access_token() -> str:
 
     # !!! CORE SECRET !!!
-    api_key = "kblXmioD531jIQySy6FwDCBb"
-    secret_key = "nt2KYxD0FghD4SZU0n7XwNCOISklCV3j"
+    api_key = API_KEY
+    secret_key = SECRET_KEY
     url = (
         "https://aip.baidubce.com/oauth/2.0/token"
         "?grant_type=client_credentials&"

@@ -4,3 +4,5 @@ __pycache__
 
 *.xlsx
 *.xls
+
+/tagging/auth/key.py
